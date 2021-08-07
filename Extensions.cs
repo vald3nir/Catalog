@@ -13,7 +13,7 @@ namespace Catalog
                 Name = item.Name,
                 Price = item.Price,
                 CreatedDate = item.CreatedDate
-            }
+            };
         }
     }
 }
