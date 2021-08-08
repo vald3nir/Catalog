@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Catalog.Entities;
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace Catalog.Repositories
@@ -20,6 +21,7 @@ namespace Catalog.Repositories
         private const string databaseName = "catalog";
         private const string collectionName = "items";
         private readonly IMongoCollection<Item> itemsCollection;
+        private readonly FilterDefinitionBuilder<Item> filterBuilder = Builders<Item>.Filter;
 
         public MongoDbItemsRepository(IMongoClient mongoClient)
         {
@@ -29,12 +31,13 @@ namespace Catalog.Repositories
 
         public IEnumerable<Item> GetItems()
         {
-            return null;
+            return itemsCollection.Find(new BsonDocument()).ToList();
         }
 
         public Item GetItem(Guid id)
         {
-            return null;
+            var filter = filterBuilder.Eq(itemsCollection => itemsCollection.Id, id);
+            return itemsCollection.Find(filter).SingleOrDefault();
         }
 
         public void CreateItem(Item item)
