@@ -8,15 +8,6 @@ using MongoDB.Driver;
 
 namespace Catalog.Repositories
 {
-    /*
-        setup: 
-        dotnet add package MongoDB.Driver --version 2.13.1 
-
-        docker pull tutum/mongodb
-        docker run -d -p 27017:27017 -p 28017:28017 -e AUTH=no tutum/mongodb // criação sem senha
-        docker ps -a
-    */
-
     public class MongoDbItemsRepository : IItemsRepository
     {
         private const string databaseName = "catalog";
