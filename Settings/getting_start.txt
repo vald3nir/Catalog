@@ -1,6 +1,7 @@
 
 libraries: 
-    dotnet add package MongoDB.Driver --version 2.13.1  // add mongo library
+    dotnet add package MongoDB.Driver                   // MongoDb library
+    dotnet add package AspNetCore.HealthChecks.MongoDb  // Health
 
 create conteiner with MongoDB
 
