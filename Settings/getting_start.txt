@@ -1,0 +1,14 @@
+
+libraries: 
+    dotnet add package MongoDB.Driver --version 2.13.1  // add mongo library
+
+create conteiner with MongoDB
+
+    docker pull tutum/mongodb
+    docker run -d -p 27017:27017 -p 28017:28017 -e AUTH=no tutum/mongodb // criação sem senha
+    docker ps -a
+
+Net secrets
+    dotnet user-secrets init
+    dotnet user-secrets set MongoDbSettings:Password f2VY86cGd03X0NGI
+    
