@@ -36,7 +36,7 @@ namespace Catalog.Repositories
 
         public Item GetItem(Guid id)
         {
-            var filter = filterBuilder.Eq(itemsCollection => itemsCollection.Id, id);
+            var filter = filterBuilder.Eq(item => item.Id, id);
             return itemsCollection.Find(filter).SingleOrDefault();
         }
 
@@ -47,12 +47,14 @@ namespace Catalog.Repositories
 
         public void UpdateItem(Item item)
         {
+            var filter = filterBuilder.Eq(existingItem => existingItem.Id, item.Id);
+            itemsCollection.ReplaceOne(filter, item);
         }
 
         public void DeleteItem(Guid id)
         {
-            // var index = items.FindIndex(existingItem => existingItem.Id == id);
-            // items.RemoveAt(index);
+            var filter = filterBuilder.Eq(item => item.Id, id);
+            itemsCollection.DeleteOne(filter);
         }
     }
 }
