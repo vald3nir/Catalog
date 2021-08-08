@@ -1,5 +1,5 @@
 # Catalog
- Rest API example project with C#
+ Example of API Rest of an Items Catalog with .NET 5/C#
 
 ## Project features
 
