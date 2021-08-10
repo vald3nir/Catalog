@@ -5,9 +5,9 @@
 
 - Clean architecture
 - Exploring the default Swagger UI page
-- Use mongodb and in-memory repository to save data
+- Persisting Entities with MongoDB
 - Use dependency injection
-- Use async tasks
+- Use Tasks, Async and Await
 - Secrets and Health Checks
 - Docker and Kubernetes
 - Unit Testing and TDD
