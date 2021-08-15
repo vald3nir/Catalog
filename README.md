@@ -1,4 +1,4 @@
-# Catalog
+# Catalog API
 
 Example of API Rest of an Items Catalog with .NET 5/C#
 
