@@ -11,7 +11,6 @@ Example of API Rest of an Items Catalog with .NET 5/C#
 - Use Tasks, Async and Await
 - Secrets and Health Checks
 - Docker
-- Unit Testing and TDD
 
 ## Code reference
 
