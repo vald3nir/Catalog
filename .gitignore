@@ -10,5 +10,5 @@ tmp/nanoc/
 crash.log
 
 # project cache
-*.dll
-*.pdb
+**/bin
+**/obj
