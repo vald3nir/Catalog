@@ -1,5 +1,6 @@
 # Catalog
- Example of API Rest of an Items Catalog with .NET 5/C#
+
+Example of API Rest of an Items Catalog with .NET 5/C#
 
 ## Project features
 
@@ -9,7 +10,7 @@
 - Use dependency injection
 - Use Tasks, Async and Await
 - Secrets and Health Checks
-- Docker and Kubernetes
+- Docker
 - Unit Testing and TDD
 
 ## Code reference
